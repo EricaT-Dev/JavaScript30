@@ -79,6 +79,7 @@ h1 {
 /*adds styles for Shoot! message*/
 
 #hoverFeedback{
+  text-color: red;
   position: absolute;
   top: 10%;
   right: 20%;
