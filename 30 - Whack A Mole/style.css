@@ -76,3 +76,11 @@ h1 {
 .hole.up .mole {
   top: 0;
 }
+/*adds styles for Shoot! message*/
+
+#hoverFeedback{
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  font-size: 8rem;
+}
