@@ -57,7 +57,7 @@
   }
 
   function peep() {
-    const time = randomTime(900, 1000);
+    const time = randomTime(1200, 1500);
     const hole = randomHole(holes);
     hole.classList.add('up');
     setTimeout(() => {
@@ -79,9 +79,10 @@
     score++;
     this.parentNode.classList.remove('up');
     scoreBoard.textContent = score;
+    document.getElementById("clickFeedback").textContent = "Nice Shot!";
   }
   document.querySelector('.mole').addEventListener ("mouseover", event => {
-    moles.style.background = "URL('targetOnClick.jpg')"
+    document.getElementById("hoverFeedback").textContent = "Shoot!";
   })
   moles.forEach(mole => mole.addEventListener('click', bonk));
   
