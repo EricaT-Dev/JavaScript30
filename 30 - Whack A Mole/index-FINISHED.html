@@ -81,7 +81,7 @@
     scoreBoard.textContent = score;
     moles.style.backgroundColor = "red";
   }
-  moles.addEventListener ("mouseover", function() {
+  moles.addEventListener ("mouseover", (event) => {
     moles.style.backgroundColor = "red";
   })
   moles.forEach(mole => mole.addEventListener('click', bonk));
