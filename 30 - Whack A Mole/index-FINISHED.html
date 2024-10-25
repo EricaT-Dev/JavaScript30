@@ -80,7 +80,7 @@
     this.parentNode.classList.remove('up');
     scoreBoard.textContent = score;
   }
-  moles.addEventListener ("mouseover", event => {
+  document.querySelectorAll('.mole').addEventListener ("mouseover", event => {
     moles.style.backgroundColor = "red";
   })
   moles.forEach(mole => mole.addEventListener('click', bonk));
