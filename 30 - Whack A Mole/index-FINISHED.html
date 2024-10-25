@@ -130,7 +130,10 @@
     document.querySelector('#popUp6').addEventListener ("mouseout", event => {
     document.getElementById("hoverFeedback").textContent = "Out of range"
   })
-  
+  //adds countdown
+  for (var countDown = randomHole(holes); countDown>0; countDown--){
+    console.log(countDown);
+  }
   
 
 
