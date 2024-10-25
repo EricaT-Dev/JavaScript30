@@ -14,22 +14,22 @@
   <p id="clickFeedback"></p>
   <div class="game">
     <div class="hole hole1">
-      <div class="mole"></div>
+      <div id="popUp1" class="mole"></div>
     </div>
     <div class="hole hole2">
-      <div class="mole"></div>
+      <div id="popUp2" class="mole"></div>
     </div>
     <div class="hole hole3">
-      <div class="mole"></div>
+      <div id="popUp3" class="mole"></div>
     </div>
     <div class="hole hole4">
-      <div class="mole"></div>
+      <div id="popUp4" class="mole"></div>
     </div>
     <div class="hole hole5">
-      <div class="mole"></div>
+      <div id="popUp5" class="mole"></div>
     </div>
     <div class="hole hole6">
-      <div class="mole"></div>
+      <div id="popUp3" class="mole"></div>
     </div>
   </div>
   <p id="hoverFeedback"></p>
@@ -80,14 +80,57 @@
     this.parentNode.classList.remove('up');
     scoreBoard.textContent = score;
   }
-  document.querySelector('.mole').addEventListener ("mouseover", event => {
+  moles.forEach(mole => mole.addEventListener('click', bonk));
+  
+  //adds shoot text on hover
+  document.querySelector('#popUp1').addEventListener ("mouseover", event => {
     document.getElementById("hoverFeedback").style.display = "block";
     document.getElementById("hoverFeedback").textContent = "Shoot!";
   })
-    document.querySelector('.mole').addEventListener ("mouseout", event => {
+    document.querySelector('#popUp1').addEventListener ("mouseout", event => {
     document.getElementById("hoverFeedback").style.display ="none";
   })
-  moles.forEach(mole => mole.addEventListener('click', bonk));
+
+  document.querySelector('#popUp2').addEventListener ("mouseover", event => {
+    document.getElementById("hoverFeedback").style.display = "block";
+    document.getElementById("hoverFeedback").textContent = "Shoot!";
+  })
+    document.querySelector('#popUp2').addEventListener ("mouseout", event => {
+    document.getElementById("hoverFeedback").style.display ="none";
+  })
+
+  document.querySelector('#popUp3').addEventListener ("mouseover", event => {
+    document.getElementById("hoverFeedback").style.display = "block";
+    document.getElementById("hoverFeedback").textContent = "Shoot!";
+  })
+    document.querySelector('#popUp3').addEventListener ("mouseout", event => {
+    document.getElementById("hoverFeedback").style.display ="none";
+  })
+
+  document.querySelector('#popUp4').addEventListener ("mouseover", event => {
+    document.getElementById("hoverFeedback").style.display = "block";
+    document.getElementById("hoverFeedback").textContent = "Shoot!";
+  })
+    document.querySelector('#popUp4').addEventListener ("mouseout", event => {
+    document.getElementById("hoverFeedback").style.display ="none";
+  })
+
+  document.querySelector('#popUp5').addEventListener ("mouseover", event => {
+    document.getElementById("hoverFeedback").style.display = "block";
+    document.getElementById("hoverFeedback").textContent = "Shoot!";
+  })
+    document.querySelector('#popUp5').addEventListener ("mouseout", event => {
+    document.getElementById("hoverFeedback").style.display ="none";
+  })
+
+  document.querySelector('#popUp6').addEventListener ("mouseover", event => {
+    document.getElementById("hoverFeedback").style.display = "block";
+    document.getElementById("hoverFeedback").textContent = "Shoot!";
+  })
+    document.querySelector('#popUp6').addEventListener ("mouseout", event => {
+    document.getElementById("hoverFeedback").style.display ="none";
+  })
+  
   
 
 
