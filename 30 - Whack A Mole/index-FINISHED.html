@@ -81,7 +81,7 @@
     scoreBoard.textContent = score;
   }
   document.querySelector('.mole').addEventListener ("mouseover", event => {
-    moles.style.backgroundColor = "red";
+    moles.style.background = "URL('targetOnClick.jpg')"
   })
   moles.forEach(mole => mole.addEventListener('click', bonk));
   
