@@ -81,6 +81,7 @@
     scoreBoard.textContent = score;
   }
   document.querySelector('.mole').addEventListener ("mouseover", event => {
+    document.getElementById("hoverFeedback").style.display = "block";
     document.getElementById("hoverFeedback").textContent = "Shoot!";
   })
       document.querySelector('.mole').addEventListener ("mouseout", event => {
