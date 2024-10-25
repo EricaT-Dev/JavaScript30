@@ -79,6 +79,8 @@
     score++;
     this.parentNode.classList.remove('up');
     scoreBoard.textContent = score;
+    moles.classList.remove("mole");
+    moles.classList.add("moleOnClick");
   }
 
   moles.forEach(mole => mole.addEventListener('click', bonk));
