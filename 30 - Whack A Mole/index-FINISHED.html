@@ -79,11 +79,11 @@
     score++;
     this.parentNode.classList.remove('up');
     scoreBoard.textContent = score;
-    moles.style.background = "url('targetOnClick.jpg')";
+    moles.style.backgroundColor = "red";
   }
-  /*moles.addEventListener ("mouseover", function() {
-    moles.style.background = "url('targetOnClick.jpg')";
-  })*/
+  moles.addEventListener ("mouseover", function() {
+    moles.style.backgroundColor = "red";
+  })
   moles.forEach(mole => mole.addEventListener('click', bonk));
   
 
