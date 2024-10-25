@@ -80,13 +80,11 @@
     this.parentNode.classList.remove('up');
     scoreBoard.textContent = score;
   }
-  function hover(e) {
-    moles.classList.remove("mole");
-    moles.classList.add("moleOnClick");
+  moles.addEventListener("mouseover",function(e) {
+    moles.style.background = "url('targetOnClick.jpg');
   }
   moles.forEach(mole => mole.addEventListener('click', bonk));
   
-  moles.forEach(mole => mole.addEventListener('mouseover', hover));
 
 
 </script>
