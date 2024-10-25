@@ -80,7 +80,7 @@ h1 {
 
 #hoverFeedback{
   display: block;
-  text-color: red;
+  font-color: red;
   position: absolute;
   top: 15%;
   right: 20%;
