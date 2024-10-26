@@ -83,17 +83,7 @@
     document.getElementById("countdown").textContent = countDown;
     }, 1000 * countDown);
   }
-  }
-
-  function bonk(e) {
-    if(!e.isTrusted) return; // cheater!
-    score++;
-    this.parentNode.classList.remove('up');
-    scoreBoard.textContent = score;
-  }
-  moles.forEach(mole => mole.addEventListener('click', bonk));
-  
-  //adds shoot text on hover
+    //adds shoot text on hover
   document.querySelector('#popUp1').addEventListener ("mouseover", event => {
     document.getElementById("hoverFeedback").style.display = "block";
     document.getElementById("hoverFeedback").textContent = "Shoot!";
@@ -141,6 +131,17 @@
     document.querySelector('#popUp6').addEventListener ("mouseout", event => {
     document.getElementById("hoverFeedback").textContent = "Out of range"
   })
+
+  }
+
+  function bonk(e) {
+    if(!e.isTrusted) return; // cheater!
+    score++;
+    this.parentNode.classList.remove('up');
+    scoreBoard.textContent = score;
+  }
+  moles.forEach(mole => mole.addEventListener('click', bonk));
+  
 
 
 
