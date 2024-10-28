@@ -74,9 +74,11 @@
     setTimeout(() => timeUp = true, 10000)
     
     //adds countdown
+var countDown = 10
 function timerDown(){
-  for (var countDown = 10; countDown>0; countDown--){
-    document.getElementById("roundtime").textContent = 'Time playing this round : ' + countDown + ' seconds';
+  document.getElementById("roundtime").textContent = 'Time playing this round : ' + countDown + ' seconds';
+  if (countDown>0){
+    setTimeout (timerDown, 1000);
   }
 }
     //adds shoot text on hover and changes image
