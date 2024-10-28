@@ -86,3 +86,9 @@ h1 {
   right: 20%;
   font-size: 6rem;
 }
+/*adds styles for round time counter 
+#roundTime{
+  font-size: 5rem;
+  position: absolute;
+  bottom: 20%;
+}
