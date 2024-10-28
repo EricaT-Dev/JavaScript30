@@ -74,10 +74,10 @@
     setTimeout(() => timeUp = true, 10000)
     
     //adds countdown
-  var timeLeft = 10;
-  for (var roundTime = 10; roundTime>=0; roundTime--){
+
+  for (var timeLeft = 10; timeLeft>=0; timeLeft--){
     timerRound(timeLeft);
-    roundTime--;
+    timeLeft--;
   }
   function timerRound(timeLeft){
     setTimeout(function(){
