@@ -82,7 +82,7 @@
   function timerRound(timeLeft){
     setTimeout(function(){
     console.log(timeLeft);
-    document.getElementById("roundtime").textContent =  "Round time : " + timeLeft ;
+    document.getElementById("roundtime").textContent =  "Round time : " + timeLeft-- ;
     }, 1000 * roundTime);
     setTimeout(() => timeUp = true, 10000)
   }
