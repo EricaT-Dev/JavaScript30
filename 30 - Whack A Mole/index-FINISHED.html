@@ -74,16 +74,11 @@
     setTimeout(() => timeUp = true, 10000)
     
     //adds countdown
-
+function timerDown(){
   for (var countDown = 10; countDown>0; countDown--){
-    timerDown(countDown);
-  }
-  function timerDown(countDown){
-    setTimeout(function(){
-    console.log(countDown);
     document.getElementById("roundtime").textContent = 'Time playing this round : ' + countDown + ' seconds';
-    }, 1000 * countDown);
-  };
+  }
+}
     //adds shoot text on hover and changes image
   document.querySelector('#popUp1').addEventListener ("mouseover", event => {
     document.getElementById("hoverFeedback").style.display = "block";
