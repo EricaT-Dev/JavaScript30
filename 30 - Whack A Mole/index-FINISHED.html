@@ -74,13 +74,15 @@
     setTimeout(() => timeUp = true, 10000)
     
     //adds countdown
+  var timeLeft = 10;
   for (var roundTime = 10; roundTime>=0; roundTime--){
     timerRound(roundTime);
+    timeLeft--;
   }
   function timerRound(roundTime){
     setTimeout(function(){
-    console.log(roundTime);
-    document.getElementById("roundtime").textContent =  "Round time : " + roundTime ;
+    console.log(timeLeft);
+    document.getElementById("roundtime").textContent =  "Round time : " + timeLeft ;
     }, 1000 * roundTime);
     setTimeout(() => timeUp = true, 10000)
   }
