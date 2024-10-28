@@ -78,7 +78,7 @@ var countDown = 10;
 function timerDown(){
   document.getElementById("roundtime").textContent = 'Time playing this round : ' + countDown + ' seconds';
   if (countDown>0){
-    setTimeout (timerDown, 1000);
+    setTimeout (function(){timerDown(--countDown);}, 1000);
   }
 }
     timerDown(); 
