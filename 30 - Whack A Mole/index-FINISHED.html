@@ -81,6 +81,8 @@ function timerDown(){
     setTimeout (timerDown, 1000);
   }
 }
+    timerDown(); 
+    
     //adds shoot text on hover and changes image
   document.querySelector('#popUp1').addEventListener ("mouseover", event => {
     document.getElementById("hoverFeedback").style.display = "block";
