@@ -82,6 +82,7 @@
     console.log(roundTime);
     document.getElementById("roundtime").textContent =  "Round time : " + roundTime ;
     }, 1000 * roundTime);
+    setTimeout(() => timeUp = true, 10000)
   }
     //adds shoot text on hover and changes image
   document.querySelector('#popUp1').addEventListener ("mouseover", event => {
