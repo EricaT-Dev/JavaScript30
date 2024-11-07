@@ -7,7 +7,7 @@
 </head>
 <body>
   <style>
-
+    
     html {
       font-family: sans-serif;
       background: #ffc600;
@@ -52,6 +52,14 @@
       font-size: 20px;
       font-weight: 200;
       border-left: 1px solid #D1E2FF;
+    }
+    #headings{
+      max-width: 400px;
+      margin: 50px auto;
+    }
+    #submit_button{
+      max-width: 400px;
+      margin: 50px auto;
     }
   </style>
    <!--
@@ -102,7 +110,7 @@
       <p>Don't forget to tweet your result!</p>
     </div>
   </div>
-  <input type="submit">Submit</input>
+  <input id="submit_button" type="submit">
 
 <script>
 const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
