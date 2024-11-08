@@ -54,10 +54,10 @@
       border-left: 1px solid #D1E2FF;
     }
     /*center heading, sub-heading, submit button, and results
-    change heading and results text color to white
+    change heading and results text color to white and background color to red
     */
     #headings{
-      background-color: black;
+      background-color: red;
       color: white;
       max-width: 800px;
       margin: 50px auto;
@@ -67,6 +67,7 @@
       margin: 50px auto;
     }
     #displayResults > p{
+      background-color: red;
       color: white;
       max-width: 400px;
       margin: 50px auto;
@@ -242,22 +243,22 @@ function checkScore(){
   finalScore = song1Score + song2Score + song3Score + song4Score + song5Score + song6Score + song7Score + song8Score + song9Score + song10Score;
   //give result based on final score
   if(finalScore == 50){
-    document.getElementById("yourScore").textContent ="Your Score: " + finalScore;
+    document.getElementById("yourScore").textContent ="Your Score: " + finalScore + " out of 50";
     document.getElementById("result").textContent ="You're their number one fan!";
   }else if(finalScore >=40 && finalScore <50){
-    document.getElementById("yourScore").textContent ="Your Score: " + finalScore;
+    document.getElementById("yourScore").textContent ="Your Score: " + finalScore + " out of 50";
     document.getElementById("result").textContent ="You're a big fan!";
   }else if(finalScore >=30 && finalScore <40){
-    document.getElementById("yourScore").textContent ="Your Score: " + finalScore;
+    document.getElementById("yourScore").textContent ="Your Score: " + finalScore + " out of 50";
     document.getElementById("result").textContent ="You're a fan";
   }else if(finalScore >=20 && finalScore <30){
-    document.getElementById("yourScore").textContent ="Your Score: " + finalScore;
+    document.getElementById("yourScore").textContent ="Your Score: " + finalScore + " out of 50";
     document.getElementById("result").textContent ="You're a small fan";
   }else if(finalScore >=10 && finalScore <20){
-    document.getElementById("yourScore").textContent ="Your Score: " + finalScore;
+    document.getElementById("yourScore").textContent ="Your Score: " + finalScore + " out of 50";
     document.getElementById("result").textContent ="You've heard of Arctic Monkeys before";
   }else{
-    document.getElementById("yourScore").textContent ="Your Score: " + finalScore;
+    document.getElementById("yourScore").textContent ="Your Score: " + finalScore + " out of 50";
     document.getElementById("result").textContent ="Do you even know who Arctic Monkeys are?";
   };
 };
