@@ -177,73 +177,38 @@ checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
   document.getElementById("button").addEventListener("click", checkScore);
   
 function checkScore(){
-  //if check song 1, chose correctly and get score of 5 for this question
+  //if check song 1, chose correctly and get score of 10 for this question
   song1checked = document.getElementById("song-1").checked;
   if(song1checked == true){
-    song1Score = 5;
+    song1Score = 10;
   }else{
     song1Score = 0;
   };
-  //if check song 2, chose correctly and get score of 5 for this question
+  //if check song 2, chose correctly and get score of 10 for this question
   song2checked = document.getElementById("song-2").checked;
   if(song2checked == true){
-    song2Score = 5;
+    song2Score = 10;
   }else{
     song2Score = 0;
   };
-  //if check song 3, chose incorrectly and get score of 0 for this question
-  song3checked = document.getElementById("song-3").checked;
-  if(song3checked == true){
-    song3Score = 0;
-  }else{
-    song3Score = 5;
-  };
-  //if check song 4, chose correctly and get score of 5 for this question
+  //if check song 4, chose correctly and get score of 10 for this question
   song4checked = document.getElementById("song-4").checked;
   if(song4checked == true){
-    song4Score = 5;
+    song4Score = 10;
   }else{
     song4Score = 0;
   };
-  //if check song 5, chose incorrectly and get score of 0 for this question
-  song5checked = document.getElementById("song-5").checked;
-  if(song5checked == true){
-    song5Score = 0;
-  }else{
-    song5Score = 5;
-  };
-  //if check song 6, chose incorrectly and get score of 0 for this question
-  song6checked = document.getElementById("song-6").checked;
-  if(song6checked == true){
-    song6Score = 0;
-  }else{
-    song6Score = 5;
-  };
-  //if check song 7, chose incorrectly and get score of 0 for this question
-  song7checked = document.getElementById("song-7").checked;
-  if(song7checked == true){
-    song7Score = 0;
-  }else{
-    song7Score = 5;
-  };
-  //if check song 8, chose correctly and get score of 5 for this question
+  //if check song 8, chose correctly and get score of 10 for this question
   song8checked = document.getElementById("song-8").checked;
   if(song8checked == true){
     song8Score = 5;
   }else{
     song8Score = 0;
   };
-  //if check song 9, chose incorrectly and get score of 0 for this question
-  song9checked = document.getElementById("song-9").checked;
-  if(song9checked == true){
-    song9Score = 0;
-  }else{
-    song9Score = 5;
-  };
-  //if check song 10, chose correctly and get score of 5 for this question
+  //if check song 10, chose correctly and get score of 10 for this question
   song10checked = document.getElementById("song-10").checked;
   if(song10checked == true){
-    song10Score = 5;
+    song10Score = 10;
   }else{
     song10Score = 0;
   };
