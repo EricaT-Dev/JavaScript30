@@ -55,6 +55,7 @@
     }
     /*center heading, sub-heading, submit button, and results
     change heading and results text color to white and background color to red
+    give results a display of none originally
     */
     #headings{
       background-color: red;
@@ -66,7 +67,8 @@
       max-width: 400px;
       margin: 50px auto;
     }
-    #displayResults > p{
+    #displayResults{
+      display: none;
       background-color: red;
       color: white;
       max-width: 400px;
@@ -241,6 +243,8 @@ function checkScore(){
   };
   //calculate final score
   finalScore = song1Score + song2Score + song3Score + song4Score + song5Score + song6Score + song7Score + song8Score + song9Score + song10Score;
+  //display results
+    document.getElementById("displayResults").style.display = "block";
   //give result based on final score
   if(finalScore == 50){
     document.getElementById("yourScore").textContent ="Your Score: " + finalScore + " out of 50";
