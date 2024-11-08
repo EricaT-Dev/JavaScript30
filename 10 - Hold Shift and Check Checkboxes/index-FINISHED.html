@@ -74,9 +74,10 @@
 
   -->
   <div id="headings">
-    <h1>How big of a fan of the Arctic Monkeys are you?</h1>
-    <h2>Check all of the songs that belong to the Arctic Monkeys</h2>
+    <h1>How big of a fan of Arctic Monkeys are you?</h1>
+    <h2>Check all of the songs by Arctic Monkeys</h2>
   </div>
+  //ads ids for elements and changes p content to song names. some of the songs are by Arctic Monkeys and some are not
   <div class="inbox">
     <div class="item">
       <input id="song-1" type="checkbox">
@@ -119,8 +120,14 @@
       <p>Why'd You Only Call Me When You're High?</p>
     </div>
   </div>
+  //adds submit button
   <div id="submit_button">
     <input id="button" type="submit">
+  </div>
+   //adds results
+  <div id="displayResults">
+    <p id="yourScore"></p>
+    <p id="result"></p>
   </div>
 <script>
 const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
@@ -151,6 +158,104 @@ function handleCheck(e) {
 }
 
 checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+
+  //when user clicks the submit button, the checkScore function is executed
+  document.getElementById("button").addEventListener("click", checkScore);
+  
+function checkScore(){
+  //if check song 1, chose correctly and get score of 5 for this question
+  song1checked = document.getElementById("song-1").checked;
+  if(song1checked == true){
+    song1Score = 5;
+  }else{
+    song1Score = 0;
+  };
+  //if check song 2, chose correctly and get score of 5 for this question
+  song2checked = document.getElementById("song-2").checked;
+  if(song2checked == true){
+    song2Score = 5;
+  }else{
+    song2Score = 0;
+  };
+  //if check song 3, chose incorrectly and get score of 0 for this question
+  song3checked = document.getElementById("song-3").checked;
+  if(song3checked == true){
+    song3Score = 0;
+  }else{
+    song3Score = 5;
+  };
+  //if check song 4, chose correctly and get score of 5 for this question
+  song4checked = document.getElementById("song-4").checked;
+  if(song4checked == true){
+    song4Score = 5;
+  }else{
+    song4Score = 0;
+  };
+  //if check song 5, chose incorrectly and get score of 0 for this question
+  song5checked = document.getElementById("song-5").checked;
+  if(song5checked == true){
+    song5Score = 0;
+  }else{
+    song5Score = 5;
+  };
+  //if check song 6, chose incorrectly and get score of 0 for this question
+  song6checked = document.getElementById("song-6").checked;
+  if(song6checked == true){
+    song6Score = 0;
+  }else{
+    song6Score = 5;
+  };
+  //if check song 7, chose incorrectly and get score of 0 for this question
+  song7checked = document.getElementById("song-7").checked;
+  if(song7checked == true){
+    song7Score = 0;
+  }else{
+    song7Score = 5;
+  };
+  //if check song 8, chose correctly and get score of 5 for this question
+  song8checked = document.getElementById("song-8").checked;
+  if(song8checked == true){
+    song8Score = 5;
+  }else{
+    song8Score = 0;
+  };
+  //if check song 9, chose incorrectly and get score of 0 for this question
+  song9checked = document.getElementById("song-9").checked;
+  if(song9checked == true){
+    song9Score = 0;
+  }else{
+    song9Score = 5;
+  };
+  //if check song 10, chose correctly and get score of 5 for this question
+  song10checked = document.getElementById("song-10").checked;
+  if(song10checked == true){
+    song10Score = 5;
+  }else{
+    song10Score = 0;
+  };
+  //calculate final score
+  finalScore = song1Score + song2Score + song3Score + song4Score + song5Score + song6Score + song7Score + song8Score + song9Score + song10Score;
+  //give result based on final score
+  if(finalScore == 50){
+    document.getElementById("yourScore").textContent ="Your Score: " + finalScore;
+    document.getElementById("result").textContent ="You're their number one fan!";
+  }else if(finalScore >=40 && finalScore <50){
+    document.getElementById("yourScore").textContent ="Your Score: " + finalScore;
+    document.getElementById("result").textContent ="You're a big fan!";
+  }else if(finalScore >=30 && finalScore <40){
+    document.getElementById("yourScore").textContent ="Your Score: " + finalScore;
+    document.getElementById("result").textContent ="You're a fan";
+  }else if(finalScore >=20 && finalScore <30){
+    document.getElementById("yourScore").textContent ="Your Score: " + finalScore;
+    document.getElementById("result").textContent ="You're a small fan";
+  }else if(finalScore >=10 && finalScore <20){
+    document.getElementById("yourScore").textContent ="Your Score: " + finalScore;
+    document.getElementById("result").textContent ="You've heard of Arctic Monkeys before";
+  }else{
+    document.getElementById("yourScore").textContent ="Your Score: " + finalScore;
+    document.getElementById("result").textContent ="Do you even know who Arctic Monkeys are?";
+  };
+};
 </script>
 </body>
 </html>
