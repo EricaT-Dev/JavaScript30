@@ -7,7 +7,35 @@
 </head>
 <body>
 
-
+<!--Add timezone form--> 
+    <form action="">
+      <div id="setTimezone">
+        <h1>Select your time zone</h1>
+        <select id="zone" name="timezone">
+          <option value="Eastern">Eastern Time</option>
+          <option value="Central">Central Time</option>
+          <option value="Mountain">Mountain Time</option>
+          <option value="Pacific">Pacific Time</option>
+        </select>
+        <button id ="zoneChange" type="submit">Change time zone</button>
+      </div>
+    </form>
+    <!--Display Time on machine-->
+    <p id="machineTime"></p>
+    <!--Display changed time-->
+    <p id="changedTime"></p>
+    <!--add type of clock form-->
+    <form action="">
+      <div id="ChangeTimeFormat">
+        <h1>Select a 12 hour clock or a 24 hour clock</h1>
+        <select id="clock" name="timeType">
+          <option value="12">option 1</option>
+          <option value="24">option 2</option>
+        </select>
+        <button id ="clockChange" type="submit">Change clock</button>
+      </div>
+    </form>
+  
     <div class="clock">
       <div class="clock-face">
         <div class="hand hour-hand"></div>
@@ -71,6 +99,39 @@
 </style>
 
 <script>
+  //find time
+      let now = new Date();
+      let currentTime=now.toLocaleString();
+      let putTime = document.getElementById("machineTime");
+      putTime.innerHTML= currentTime;
+      //change time zone function
+       document.getElementById("zoneChange").addEventListener("click", changeTimezone);
+       function changeTimezone(){
+        let zone = document.getElementById("zone");
+        let selected =zone.options[zone.selectedIndex].value;
+        if(selected="Eastern"){
+            let nowNew = new Date();
+            let NewTime=nowNew.toLocaleString("en-US",{timeZone: "America/NewYork"});
+            let putNewTime = document.getElementById("changedTime");
+            putNewTime.innerHTML= newTime;
+        }else if(selected="Central"){
+            let nowNew = new Date();
+            let NewTime=nowNew.toLocaleString("en-US",{timeZone: "America/Chicago"});
+            let putNewTime = document.getElementById("changedTime");
+            putNewTime.innerHTML= newTime;
+        }else if(selected="Mountain"){
+            let nowNew = new Date();
+            let NewTime=nowNew.toLocaleString("en-US",{timeZone: "America/Denver"});
+            let putNewTime = document.getElementById("changedTime");
+            putNewTime.innerHTML= newTime;
+        }else if(selected="Pacific"){
+            let nowNew = new Date();
+            let NewTime=nowNew.toLocaleString("en-US",{timeZone: "America/Los_Angeles"});
+            let putNewTime = document.getElementById("changedTime");
+            putNewTime.innerHTML= newTime;
+        }     
+       };
+  
   const secondHand = document.querySelector('.second-hand');
   const minsHand = document.querySelector('.min-hand');
   const hourHand = document.querySelector('.hour-hand');
