@@ -21,10 +21,11 @@
       </div>
     </form>
     <!--Display Time on machine-->
+  <h1>Time on your Machine</h1>
     <p id="machineTime"></p>
     <!--Display changed time-->
+  <h1>Time after Zone Change</h1>
     <p id="changedTime"></p>
-    <!--add type of clock form-->
   
     <div class="clock">
       <div class="clock-face">
@@ -90,10 +91,10 @@
 
 <script>
   //find time
-      // let now = new Date();
-      // let currentTime=now.toLocaleString();
-      // let putTime = document.getElementById("machineTime");
-      // putTime.innerHTML= currentTime;
+      let now = new Date();
+      let currentTime=now.toLocaleString();
+      let putTime = document.getElementById("machineTime");
+      putTime.innerHTML= currentTime;
       //change time zone function
        document.getElementById("zoneChange").addEventListener("click", changeTimezone);
        function changeTimezone(){
