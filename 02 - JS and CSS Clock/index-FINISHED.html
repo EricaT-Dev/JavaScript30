@@ -102,22 +102,22 @@
         let selected =zone.options[zone.selectedIndex].value;
         if(selected="Eastern"){
             let nowNew = new Date();
-            let NewTime=nowNew.toLocaleString("en-US",{timeZone: "America/NewYork"});
+            let newTime=nowNew.toLocaleString("en-US",{timeZone: "America/NewYork"});
             let putNewTime = document.getElementById("changedTime");
             putNewTime.innerHTML= newTime;
         }else if(selected="Central"){
             let nowNew = new Date();
-            let NewTime=nowNew.toLocaleString("en-US",{timeZone: "America/Chicago"});
+            let newTime=nowNew.toLocaleString("en-US",{timeZone: "America/Chicago"});
             let putNewTime = document.getElementById("changedTime");
             putNewTime.innerHTML= newTime;
         }else if(selected="Mountain"){
             let nowNew = new Date();
-            let NewTime=nowNew.toLocaleString("en-US",{timeZone: "America/Denver"});
+            let newTime=nowNew.toLocaleString("en-US",{timeZone: "America/Denver"});
             let putNewTime = document.getElementById("changedTime");
             putNewTime.innerHTML= newTime;
         }else if(selected="Pacific"){
             let nowNew = new Date();
-            let NewTime=nowNew.toLocaleString("en-US",{timeZone: "America/Los_Angeles"});
+            let newTime=nowNew.toLocaleString("en-US",{timeZone: "America/Los_Angeles"});
             let putNewTime = document.getElementById("changedTime");
             putNewTime.innerHTML= newTime;
         }     
