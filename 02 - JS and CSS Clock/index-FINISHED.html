@@ -10,24 +10,29 @@
   <div id="info">
     <h1>Reload Page to Update Written Time</h1>
   </div>
-    <!--Display Time on machine-->
-  <h1>Time on your Machine</h1>
-    <p id="machineTime"></p>
-  <!--Display Time after zone change-->
-  <div id="setTimezone">
-        <h2>Select your time zone</h2>
-        <select id="zone" name="timezone">
-          <option value="Eastern">Eastern Time</option>
-          <option value="Central">Central Time</option>
-          <option value="Mountain">Mountain Time</option>
-          <option value="Pacific">Pacific Time</option>
-        </select>
-        <button id ="zoneChange" type="submit">Change time zone</button>
-      </div>
-    <!--Display changed time-->
-  <h2>Time after Zone Change</h2>
-    <p id="changedTime"></p>
-  
+  <div id="timeMods">
+        <!--Display Time on machine-->
+    <div id="timeOnMachine">
+      <h1>Time on your Machine</h1>
+      <p id="machineTime"></p>
+    </div>
+    <div id="timeChange">
+      <!--Display Time after zone change-->
+      <div id="setTimezone">
+            <h2>Select your time zone</h2>
+            <select id="zone" name="timezone">
+              <option value="Eastern">Eastern Time</option>
+              <option value="Central">Central Time</option>
+              <option value="Mountain">Mountain Time</option>
+              <option value="Pacific">Pacific Time</option>
+            </select>
+            <button id ="zoneChange" type="submit">Change time zone</button>
+          </div>
+        <!--Display changed time-->
+        <h2>Time after Zone Change</h2>
+        <p id="changedTime"></p>
+    </div>
+  </div>
     <div class="clock">
       <div class="clock-face">
         <div class="hand hour-hand"></div>
@@ -38,7 +43,12 @@
 
 
   <style>
+    /*Add styling modifications*/
+    #timeMods{
+      display:flex;
+    }
     html {
+      /*change background*/
       background: #018DED url(https://www.pixelstalk.net/wp-content/uploads/2016/12/Cloudy-Sky-Background-Widecsreen.jpg);
       background-size: cover;
       font-family: 'helvetica neue';
