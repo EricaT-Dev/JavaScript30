@@ -8,7 +8,6 @@
 <body>
 
 <!--Add timezone form--> 
-    <form action="">
       <div id="setTimezone">
         <h1>Select your time zone</h1>
         <select id="zone" name="timezone">
@@ -19,7 +18,6 @@
         </select>
         <button id ="zoneChange" type="submit">Change time zone</button>
       </div>
-    </form>
     <!--Display Time on machine-->
   <h1>Time on your Machine</h1>
     <p id="machineTime"></p>
@@ -97,7 +95,7 @@
       putTime.innerHTML= currentTime;
   
       //change time zone function
-       document.getElementById("zoneChange").addEventListener("click", changeTimezone);
+      document.getElementById("zoneChange").addEventListener("click", changeTimezone);
        function changeTimezone(){
         let zone = document.getElementById("zone");
         let selected =zone.value;
