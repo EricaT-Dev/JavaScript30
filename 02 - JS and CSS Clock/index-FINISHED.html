@@ -100,7 +100,7 @@
        document.getElementById("zoneChange").addEventListener("click", changeTimezone);
        function changeTimezone(){
         let zone = document.getElementById("zone");
-        let selected =zone.options[zone.selectedIndex].value;
+        let selected =zone.value;
         console.log(selected);
         if(selected="Eastern"){
             console.log("Eastern");
