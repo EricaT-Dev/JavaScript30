@@ -10,8 +10,9 @@
 <script>
 const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+//change size of canvas
+canvas.width = window.innerWidth-10%;
+canvas.height = window.innerHeight-10%;
 ctx.strokeStyle = '#BADA55';
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
@@ -27,7 +28,8 @@ let direction = true;
 function draw(e) {
   if (!isDrawing) return; // stop the fn from running when they are not moused down
   console.log(e);
-  ctx.strokeStyle = "blue"; //`hsl(${hue}, 100%, 50%)`;
+  //change color based on user input
+  ctx.strokeStyle = color; //`hsl(${hue}, 100%, 50%)`;
   ctx.beginPath();
   // start from
   ctx.moveTo(lastX, lastY);
