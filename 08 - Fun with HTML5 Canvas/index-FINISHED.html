@@ -61,6 +61,27 @@ let lastY = 0;
 let hue = 0;
 let direction = true;
 
+  document.getElementById("submitColor").addEventListener("click", changeColor);
+       function changeColor(){
+        let colors = document.getElementById("colorSelect");
+        let selected =colors.options[colors.selectedIndex].value;
+        //console.log(selected);
+        if(selected==="red"){
+          ctx.strokeStyle = "red";
+        }else if(selected==="orange"){
+          ctx.strokeStyle = "orange";
+        }else if(selected==="yellow"){
+          ctx.strokeStyle = "yellow";
+        }else if(selected==="green"){
+          ctx.strokeStyle = "green";
+        }else if(selected==="blue"){
+          ctx.strokeStyle = "blue";
+        }else if(selected==="indigo"){
+          ctx.strokeStyle = "indigo";
+        }else if(selected==="violet"){
+          ctx.strokeStyle = "violet";
+        }
+      };
 function draw(e) {
   if (!isDrawing) return; // stop the fn from running when they are not moused down
   console.log(e);
@@ -94,27 +115,7 @@ canvas.addEventListener('mousedown', (e) => {
   isDrawing = true;
   [lastX, lastY] = [e.offsetX, e.offsetY];
 });
-document.getElementById("submitColor").addEventListener("click", changeColor);
-       function changeColor(){
-        let colors = document.getElementById("colorSelect");
-        let selected =colors.options[colors.selectedIndex].value;
-        //console.log(selected);
-        if(selected==="red"){
-          ctx.strokeStyle = "red";
-        }else if(selected==="orange"){
-          ctx.strokeStyle = "orange";
-        }else if(selected==="yellow"){
-          ctx.strokeStyle = "yellow";
-        }else if(selected==="green"){
-          ctx.strokeStyle = "green";
-        }else if(selected==="blue"){
-          ctx.strokeStyle = "blue";
-        }else if(selected==="indigo"){
-          ctx.strokeStyle = "indigo";
-        }else if(selected==="violet"){
-          ctx.strokeStyle = "violet";
-        }
-      };
+
 
 canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('mouseup', () => isDrawing = false);
