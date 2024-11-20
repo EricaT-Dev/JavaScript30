@@ -128,63 +128,63 @@ let direction = true;
 function draw(e) {
   if (!isDrawing) return; // stop the fn from running when they are not moused down
   console.log(e);
-  //change color based on user input
-  // document.getElementById("submitColor").addEventListener("click", changeColor);
-  //      function changeColor(){
-  //       let colors = document.getElementById("colorSelect");
-  //       let selected =colors.options[colors.selectedIndex].value;
+  change color based on user input
+  document.getElementById("submitColor").addEventListener("click", changeColor);
+       function changeColor(){
+        let colors = document.getElementById("colorSelect");
+        let selected =colors.options[colors.selectedIndex].value;
+        console.log(selected);
+        if(selected==="red"){
+          console.log(selected);
+          ctx.strokeStyle = "red";
+        }else if(selected==="orange"){
+          console.log(selected);
+          ctx.strokeStyle = "orange";
+        }else if(selected==="yellow"){
+          console.log(selected);
+          ctx.strokeStyle = "yellow";
+        }else if(selected==="green"){
+          console.log(selected);
+          ctx.strokeStyle = "green";
+        }else if(selected==="blue"){
+          console.log(selected);
+          ctx.strokeStyle = "blue";
+        }else if(selected==="indigo"){
+          console.log(selected);
+          ctx.strokeStyle = "indigo";
+        }else if(selected==="violet"){
+          console.log(selected);
+          ctx.strokeStyle = "violet";
+        }
+      };
+  //change width based on user input
+  document.getElementById("submitWidth").addEventListener("click", changeWidth);
+       function changeWidth(){
+        let widths = document.getElementById("widthSelect");
+        let selected =widths.options[widths.selectedIndex].value;
         //console.log(selected);
-  //       if(selected==="red"){
-  //         console.log(selected);
-  //         ctx.strokeStyle = "red";
-  //       }else if(selected==="orange"){
-  //         console.log(selected);
-  //         ctx.strokeStyle = "orange";
-  //       }else if(selected==="yellow"){
-  //         console.log(selected);
-  //         ctx.strokeStyle = "yellow";
-  //       }else if(selected==="green"){
-  //         console.log(selected);
-  //         ctx.strokeStyle = "green";
-  //       }else if(selected==="blue"){
-  //         console.log(selected);
-  //         ctx.strokeStyle = "blue";
-  //       }else if(selected==="indigo"){
-  //         console.log(selected);
-  //         ctx.strokeStyle = "indigo";
-  //       }else if(selected==="violet"){
-  //         console.log(selected);
-  //         ctx.strokeStyle = "violet";
-  //       }
-  //     };
-  // //change width based on user input
-  // document.getElementById("submitWidth").addEventListener("click", changeWidth);
-  //      function changeWidth(){
-  //       let widths = document.getElementById("widthSelect");
-  //       let selected =widths.options[widths.selectedIndex].value;
-  //       //console.log(selected);
-  //       if(selected==="10"){
-  //         ctx.lineWidth = "10";
-  //       }else if(selected==="20"){
-  //         ctx.lineWidth = "20";
-  //       }else if(selected==="30"){
-  //         ctx.lineWidth = "30";
-  //       }else if(selected==="40"){
-  //         ctx.lineWidth = "40";
-  //       }else if(selected==="50"){
-  //         ctx.lineWidth = "50";
-  //       }else if(selected==="60"){
-  //         ctx.lineWidth = "60";
-  //       }else if(selected==="70"){
-  //         ctx.lineWidth = "70";
-  //       }else if(selected==="80"){
-  //         ctx.lineWidth = "80";
-  //       }else if(selected==="90"){
-  //         ctx.lineWidth = "90";
-  //       }else if(selected==="100"){
-  //         ctx.lineWidth = "100";
-  //       }
-  //     };
+        if(selected==="10"){
+          ctx.lineWidth = "10";
+        }else if(selected==="20"){
+          ctx.lineWidth = "20";
+        }else if(selected==="30"){
+          ctx.lineWidth = "30";
+        }else if(selected==="40"){
+          ctx.lineWidth = "40";
+        }else if(selected==="50"){
+          ctx.lineWidth = "50";
+        }else if(selected==="60"){
+          ctx.lineWidth = "60";
+        }else if(selected==="70"){
+          ctx.lineWidth = "70";
+        }else if(selected==="80"){
+          ctx.lineWidth = "80";
+        }else if(selected==="90"){
+          ctx.lineWidth = "90";
+        }else if(selected==="100"){
+          ctx.lineWidth = "100";
+        }
+      };
   //clear canvas if button is clicked by user
   document.getElementById("clear").addEventListener("click", clearCanvas);
       function clearCanvas(){
