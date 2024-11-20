@@ -6,13 +6,14 @@
   <link rel="icon" href="https://fav.farm/✅" />
 </head>
 <body>
+//change size of canvas
 <canvas id="draw" width="800" height="800"></canvas>
 <script>
 const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
 //change size of canvas
-// canvas.width = "50%";
-// canvas.height = "50%";
+// canvas.width = "";
+// canvas.height = "";
 ctx.strokeStyle = '#BADA55';
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
@@ -69,6 +70,10 @@ canvas.addEventListener('mouseout', () => isDrawing = false);
 <style>
   html, body {
     margin: 0;
+  }
+  /*add border to canvas*/
+  #draw {
+    border: 1px solid black;
   }
 </style>
 
