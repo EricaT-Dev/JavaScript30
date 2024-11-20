@@ -97,7 +97,7 @@ function draw(e) {
   document.getElementById("submitWidth").addEventListener("click", changeWidth);
        function changeWidth(){
         let widths = document.getElementById("widthSelect");
-        let selected =colors.options[colors.selectedIndex].value;
+        let selected =widths.options[widths.selectedIndex].value;
         //console.log(selected);
         if(selected==="10"){
           ctx.lineWidth = "10";
