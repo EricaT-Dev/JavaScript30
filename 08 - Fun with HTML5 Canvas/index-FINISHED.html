@@ -6,39 +6,41 @@
   <link rel="icon" href="https://fav.farm/✅" />
 </head>
 <body>
-<!--change size of canvas-->
-<canvas id="draw" width="800" height="800"></canvas>
-<!--add change color option-->
-  <div id="colorOptions">
-    <h2>Color:</h2>
-    <select id="colorSelect">
-      <option id="red">Red</option>
-      <option id="orange">Orange</option>
-      <option id="yellow">Yellow</option>
-      <option id="green">Green</option>
-      <option id="blue">Blue</option>
-      <option id="indigo">Indigo</option>
-      <option id="violet">Violet</option>
-    </select>
-    <input id="submitColor" type="submit" value="submit">
-  </div>
-<!--add change width option-->
-  <div id="widthOptions">
-    <h2>Width:</h2>
-    <select id="widthSelect">
-      <option id="10">10</option>
-      <option id="20">20</option>
-      <option id="30">30</option>
-      <option id="40">40</option>
-      <option id="50">50</option>
-      <option id="60">60</option>
-      <option id="70">70</option>
-      <option id="80">80</option>
-      <option id="90">90</option>
-      <option id="100">100</option>
-    </select>
-    <input id="submitWidth" type="submit" value="submit">
-  </div>
+<div id="content">
+  <!--change size of canvas-->
+  <canvas id="draw" width="800" height="800"></canvas>
+  <!--add change color option-->
+    <div id="colorOptions">
+      <h2>Color:</h2>
+      <select id="colorSelect">
+        <option id="red">Red</option>
+        <option id="orange">Orange</option>
+        <option id="yellow">Yellow</option>
+        <option id="green">Green</option>
+        <option id="blue">Blue</option>
+        <option id="indigo">Indigo</option>
+        <option id="violet">Violet</option>
+      </select>
+      <input id="submitColor" type="submit" value="submit">
+    </div>
+  <!--add change width option-->
+    <div id="widthOptions">
+      <h2>Width:</h2>
+      <select id="widthSelect">
+        <option id="10">10</option>
+        <option id="20">20</option>
+        <option id="30">30</option>
+        <option id="40">40</option>
+        <option id="50">50</option>
+        <option id="60">60</option>
+        <option id="70">70</option>
+        <option id="80">80</option>
+        <option id="90">90</option>
+        <option id="100">100</option>
+      </select>
+      <input id="submitWidth" type="submit" value="submit">
+    </div>
+</div>
 <script>
 const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
