@@ -94,6 +94,33 @@ function draw(e) {
           ctx.strokeStyle = "violet";
         }
       };
+  document.getElementById("submitWidth").addEventListener("click", changeWidth);
+       function changeWidth(){
+        let widths = document.getElementById("widthSelect");
+        let selected =colors.options[colors.selectedIndex].value;
+        //console.log(selected);
+        if(selected==="10"){
+          ctx.lineWidth = "10";
+        }else if(selected==="20"){
+          ctx.lineWidth = "20";
+        }else if(selected==="30"){
+          ctx.lineWidth = "30";
+        }else if(selected==="40"){
+          ctx.lineWidth = "40";
+        }else if(selected==="50"){
+          ctx.lineWidth = "50";
+        }else if(selected==="60"){
+          ctx.lineWidth = "60";
+        }else if(selected==="70"){
+          ctx.lineWidth = "70";
+        }else if(selected==="80"){
+          ctx.lineWidth = "80";
+        }else if(selected==="90"){
+          ctx.lineWidth = "90";
+        }else if(selected==="100"){
+          ctx.lineWidth = "100";
+        }
+      };
   ctx.beginPath();
   // start from
   ctx.moveTo(lastX, lastY);
