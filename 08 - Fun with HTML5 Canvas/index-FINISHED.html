@@ -61,6 +61,12 @@ let lastY = 0;
 let hue = 0;
 let direction = true;
 
+  
+function draw(e) {
+  if (!isDrawing) return; // stop the fn from running when they are not moused down
+  console.log(e);
+  //change color based on user input
+  ctx.strokeStyle = "blue"; //`hsl(${hue}, 100%, 50%)`;
   document.getElementById("submitColor").addEventListener("click", changeColor);
        function changeColor(){
         let colors = document.getElementById("colorSelect");
@@ -89,11 +95,6 @@ let direction = true;
           ctx.strokeStyle = "violet";
         }
       };
-function draw(e) {
-  if (!isDrawing) return; // stop the fn from running when they are not moused down
-  console.log(e);
-  //change color based on user input
-  ctx.strokeStyle = "blue"; //`hsl(${hue}, 100%, 50%)`;
   ctx.beginPath();
   // start from
   ctx.moveTo(lastX, lastY);
