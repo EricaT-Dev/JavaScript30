@@ -41,6 +41,10 @@
       </select>
       <input id="submitWidth" type="submit" value="submit">
     </div>
+    <!--add button to clear-->
+    <div id="clear">
+      <button id="clear">Clear Canvas</button>
+    </div>
   </div>
 </div>
 <script>
@@ -94,6 +98,7 @@ function draw(e) {
           ctx.strokeStyle = "violet";
         }
       };
+  //change width based on user input
   document.getElementById("submitWidth").addEventListener("click", changeWidth);
        function changeWidth(){
         let widths = document.getElementById("widthSelect");
@@ -120,6 +125,11 @@ function draw(e) {
         }else if(selected==="100"){
           ctx.lineWidth = "100";
         }
+      };
+  //clear canvas if button is clicked by user
+  document.getElementById("clear").addEventListener("click", clearCanvas);
+      function clearCanvas(){
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
       };
   ctx.beginPath();
   // start from
