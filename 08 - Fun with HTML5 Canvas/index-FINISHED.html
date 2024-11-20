@@ -93,7 +93,8 @@ function draw(e) {
 canvas.addEventListener('mousedown', (e) => {
   isDrawing = true;
   [lastX, lastY] = [e.offsetX, e.offsetY];
-  document.getElementById("submitColor").addEventListener("click", changeColor);
+});
+document.getElementById("submitColor").addEventListener("click", changeColor);
        function changeColor(){
         let colors = document.getElementById("colorSelect");
         let selected =colors.options[colors.selectedIndex].value;
@@ -114,8 +115,6 @@ canvas.addEventListener('mousedown', (e) => {
           ctx.strokeStyle = "violet";
         }
       };
-});
-
 
 canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('mouseup', () => isDrawing = false);
