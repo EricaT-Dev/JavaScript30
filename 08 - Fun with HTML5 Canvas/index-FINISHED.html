@@ -10,6 +10,7 @@
   <!--change size of canvas-->
   <canvas id="draw" width="800" height="800"></canvas>
   <!--add change color option-->
+  <div id="mods">
     <div id="colorOptions">
       <h2>Color:</h2>
       <select id="colorSelect">
@@ -40,6 +41,7 @@
       </select>
       <input id="submitWidth" type="submit" value="submit">
     </div>
+  </div>
 </div>
 <script>
 const canvas = document.querySelector('#draw');
@@ -107,6 +109,10 @@ canvas.addEventListener('mouseout', () => isDrawing = false);
   /*add border to canvas*/
   #draw {
     border: 1px solid black;
+  }
+  /*put canvas and modification options side by side*/
+  #content{
+    display: flex;
   }
 </style>
 
